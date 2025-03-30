@@ -23,7 +23,7 @@ const Signin = () => {
 
 
         try {
-            const res = await axios.post("http://localhost:8000/signin", { email, password });
+            const res = await axios.post(`${process.env.BACKEND_URL}/signin`, { email, password });
 
             if (res.data.success) {
                 // console.log("Token received:", res.data.token);

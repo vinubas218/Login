@@ -35,7 +35,7 @@ const CreateAccount = () => {
     }
 
     try {
-      const res = await axios.post("http://localhost:8000/createaccount", {
+      const res = await axios.post(`${process.env.BACKEND_URL}/createaccount`, {
         name: username,
         email,
         password
